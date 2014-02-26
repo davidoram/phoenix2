@@ -16,3 +16,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# 3rd party node modules
+client/node_modules

@@ -46,4 +46,17 @@ Run API / Backend
 Client
 ---
 
-TODO
+Install prerequisistes
+
+	$ cd client
+	
+	# Check node version
+	$ node -v
+	v0.10.26
+	
+	# Install yoeman
+	$ npm install yo
+	
+	# Pull in webapp generator
+	$ npm install generator-webapp
+	
