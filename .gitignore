@@ -1,3 +1,5 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
 *.gem
 *.rbc
 .bundle
@@ -17,5 +19,19 @@ tmp
 _yardoc
 doc/
 
-# 3rd party node modules
-client/node_modules
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/vendor/*
+!/vendor/loader.js
+
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+.DS_Store
+Thumbs.db
+/coverage/*
