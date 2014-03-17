@@ -60,14 +60,14 @@ Install prerequisistes
 	v0.10.26
 	
 	# Install yoeman
-	$ npm install yo
+	$ sudo npm install -g yo
 	
 	# Pull in webapp generator(s)
 	$ npm install generator-webapp
 	$ npm install generator-ember
 	
 	# Create new app 
-	$ ./node_modules/.bin/yo ember
+	$ yo ember
 
 Execution
 ---
@@ -76,7 +76,8 @@ Running in development mode
 
 	$ rvm use 2.0.0@phoenix2-client
 	$ cd client
-	$ ./node_modules/.bin/grunt server
+	$ grunt server
 	
 	Creatting a model
-	$ ./node_modules/.bin/yo ember:model Story
+	$ yo ember:model Story
+
