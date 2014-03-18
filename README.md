@@ -39,10 +39,11 @@ Install pre-requisite gems for API
 Run API / Backend
 
 	$ cd api
+	$ rvm use 2.0.0@phoenix2-api
 	$ rackup -Ilib config.ru
 
 	# Test API
-	$ curl -H Accept:application/vnd.phoenix-v1+json http://localhost:9292/api/ping
+	$ curl -H http://localhost:9292/api/ping
 	
 	# Test Web
 	$ open http://localhost:9292/
