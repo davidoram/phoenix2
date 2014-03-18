@@ -13,7 +13,8 @@ class API < Grape::API
   
   desc "Return the data need to render a document"
   get '/api/document/:id' do 
-		{ fields:
+		{ id: 0,
+      fields:
       [
         {
           value: {

@@ -69,6 +69,8 @@ Install prerequisistes
 	
 	# Create new app 
 	$ yo ember
+	
+See [yo docs](https://github.com/yeoman/generator-ember "yo docs")
 
 Execution
 ---
