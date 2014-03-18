@@ -1,5 +1,10 @@
 /*global Ember*/
-Client.Document = DS.Model.extend({});
+var attr = DS.attr;
+Client.Document = DS.Model.extend({
+	title: attr(),
+	key: attr(),
+	organisation: attr()
+});
 
 // probably should be mixed-in...
 Client.Document.reopen({
@@ -16,6 +21,9 @@ Client.Document.FIXTURES = [
   
   {
     id: 0,
+	title: "Project to make bigger cows",
+	key: "CONT-123-ABC",
+	organisation: "University of Moo",
   	fields: [
 		{
 	      value: {

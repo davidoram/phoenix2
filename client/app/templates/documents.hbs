@@ -2,7 +2,11 @@
 
 <ul>
  {{#each model}}
- <li>{{#link-to 'document' this}}{{this.id}}{{/link-to}}</li>
+ <li>
+	 <h2>{{#link-to 'document' this}}{{key}}{{/link-to}}</h2>
+	 <div class="">{{title}}</div>
+	 <div class="">{{organisation}}</div>
+ </li>
   {{/each}}
 </ul>
 
