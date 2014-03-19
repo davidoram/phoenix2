@@ -3,7 +3,8 @@ var attr = DS.attr;
 Client.Document = DS.Model.extend({
 	title: attr(),
 	key: attr(),
-	organisation: attr()
+	organisation: attr(),
+	fields: attr()
 });
 
 // probably should be mixed-in...
