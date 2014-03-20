@@ -1,10 +1,9 @@
 /*global Ember*/
-var attr = DS.attr;
 Client.Document = DS.Model.extend({
-	title: attr(),
-	key: attr(),
-	organisation: attr(),
-	fields: attr()
+	title: 			DS.attr('string'),
+	key: 			DS.attr('string'),
+	organisation: 	DS.attr('string'),
+	fields: 		DS.hasMany('field',{async:true})
 });
 
 // probably should be mixed-in...
@@ -21,32 +20,11 @@ Client.Document.reopen({
 Client.Document.FIXTURES = [
   
   {
-    id: 0,
-	title: "Project to make bigger cows",
-	key: "CONT-123-ABC",
-	organisation: "University of Moo",
-  	fields: [
-		{
-	      value: {
-	  			key:      20010,
-	  			type:     "Project",
-	  			column:   "projectKey",
-	  			value:    "CONT-123-ABC",
-	  			dataType: "string",
-	  			label:    "Project key"
-	  		},
-	  		layout: {
-	  			component: "read-only-string",
-	  			bootstrap:  {
-	  				row:            1,
-	  				column_start:   4,
-	  				column_span:    3,
-	  				type:           "text", 
-	  				classes:        []      
-	  			}
-	      }
-    	}
-  	]
+    id: 			1,
+	title: 			"Project to make bigger cows",
+	key: 			"CONT-123-ABC",
+	organisation: 	"University of Moo",
+	fields: 		[1]
   }
   
   
