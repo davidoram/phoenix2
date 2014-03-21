@@ -1,9 +1,9 @@
 <div class="form-group">
-    <label for="layout-{{layout.id}}" 
-	     class="col-sm-2  control-label">{{value.label}}</label>
-    <div class="col-sm-10">
+	
+    <label {{bind-attr class="l.lblClass"}}>{{l.label}}</label>
+    <div {{bind-attr class="l.widgetClass"}}>
       {{input type="text" 
 	         class="form-control" 
-			 value=value.content}}
+			 value=v.content}}
     </div>
  </div>

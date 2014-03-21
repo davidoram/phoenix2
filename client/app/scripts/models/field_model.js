@@ -10,9 +10,9 @@ Client.Field = DS.Model.extend({
 Client.Field.FIXTURES = [
   
   {
-    id: 	1,
-	layout: 1,
-	value: 	1
+    id: 		1,
+	layout: 	1,
+	value: 		1
   }
 
 ];
