@@ -24,7 +24,7 @@ Client.Document.FIXTURES = [
 	title: 			"Project to make bigger cows",
 	key: 			"CONT-123-ABC",
 	organisation: 	"University of Moo",
-	fields: 		[1]
+	fields: 		[1,2,3]
   }
   
   

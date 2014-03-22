@@ -1,6 +1,8 @@
 <div class="form-group">
 	
+	{{#if l.label}}
     <label {{bind-attr class="l.lblClass"}}>{{l.label}}</label>
+	{{/if}}
     <div {{bind-attr class="l.widgetClass"}}>
       {{input type="text" 
 	         class="form-control" 

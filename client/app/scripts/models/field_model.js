@@ -13,6 +13,16 @@ Client.Field.FIXTURES = [
     id: 		1,
 	layout: 	1,
 	value: 		1
+  },
+  {
+    id: 		2,
+	layout: 	3,
+	value: 		3
+  },
+  {
+    id: 		3,
+	layout: 	2,
+	value: 		2
   }
 
 ];
