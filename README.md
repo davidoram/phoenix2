@@ -73,6 +73,9 @@ Install prerequisistes
 	# Create new app 
 	$ yo angular
 	
+	# Setup Karma web testing
+	$ npm install karma --save-dev
+	$ npm install karma-jasmine karma-chrome-launcher --save-dev	
 
 Execution
 ---
