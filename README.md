@@ -65,12 +65,14 @@ Install prerequisistes
 	
 	# Pull in webapp generator(s)
 	$ npm install generator-webapp
-	$ npm install generator-ember
+	$ npm install generator-angular
+	
+	# Install web testing
+	$ sudo npm install -g karma-jasmine
 	
 	# Create new app 
-	$ yo ember
+	$ yo angular
 	
-See [yo docs](https://github.com/yeoman/generator-ember "yo docs")
 
 Execution
 ---
@@ -81,6 +83,4 @@ Running in development mode
 	$ cd client
 	$ grunt server
 	
-	Creatting a model
-	$ yo ember:model Story
 
