@@ -12,6 +12,10 @@ angular.module('clientApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/documents', {
+        templateUrl: 'views/documents.html',
+        controller: 'DocumentsController'
+      })
       .otherwise({
         redirectTo: '/'
       });
