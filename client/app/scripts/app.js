@@ -13,8 +13,12 @@ angular.module('clientApp', [
         controller: 'MainCtrl'
       })
       .when('/documents', {
-        templateUrl: 'views/documents.html',
-        controller: 'DocumentsController'
+        templateUrl: 'views/document-list.html',
+        controller: 'DocumentListController'
+      })
+      .when('/documents/:id', {
+        templateUrl: 'views/document.html',
+        controller: 'DocumentController'
       })
       .otherwise({
         redirectTo: '/'

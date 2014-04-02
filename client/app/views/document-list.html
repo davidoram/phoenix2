@@ -7,9 +7,9 @@
 </div>
 	
 <div class="list-group">
-  <a ng-repeat="doc in documents" ng-href="/documents/{{doc.id}}" class="list-group-item active">
-    <h4 class="list-group-item-heading">{{doc.title}}</h4>
-    <p class="list-group-item-text">...</p>
+  <a ng-repeat="doc in documents" ng-href="#/documents/{{doc.id}}" class="list-group-item active">
+    <h4 class="list-group-item-heading">{{doc.projectKey}}</h4>
+    <p class="list-group-item-text">{{doc.title}}</p>
   </a>
 </div>
 
