@@ -4,24 +4,36 @@ angular.module('clientApp')
   .controller('DocumentController', function ($scope, $log) {
     $scope.document =
 			{
-				'id' : 1,
-				'key' : 'PROJ-123',
-				'title' : 'A better way of designing databases',
-				'data': {
-					'FirstName': 'Dave',
-					'Surname': 'Smith'
+				id : 1,
+				key : 'PROJ-123',
+				title : 'A better way of designing databases',
+				data: {
+					FirstName: 'Dave',
+					Surname: 'Smith',
+					Age: 45
 				},
-				'layout' : [ {
-					'formGroup': 1,
-					'key' : 'FirstName'
+				layout : [ {
+					formGroup: 1,
+					key : 'FirstName',
+					labelColumnWidth: 3,
+					inputColumnWidth: 2
 				},
 				{
-					'formGroup': 2,
-					'key' : 'Surname'
+					formGroup: 1,
+					key : 'Age',
+					labelColumnOffset: 6,
+					labelColumnWidth: 3,
+					inputColumnWidth: 2
+				},
+				{
+					formGroup: 2,
+					key : 'Surname',
+					labelColumnWidth: 3,
+					inputColumnWidth: 2
 				}
 				]
 			};
-			
+		$scope.predicate = 'formGroup';
 			/*var groups = [];
 
 			$scope.formGroups = function() {
