@@ -12,11 +12,13 @@
 	<div class="col-xs-12 main">
 		
 		<form class="form-horizontal" role="form">
-			<div ng-repeat="layout in document.layout | orderBy:predicate" class="form-group">
-				<label for="{{layout.key}}" class="col-sm-{{layout.labelColumnWidth}} control-label">{{layout.key}}</label>
-		    <div class="col-sm-{{layout.inputColumnWidth}}">
-		      <input type="email" class="form-control" id="{{layout.key}}" placeholder="{{layout.key}}">
-		    </div>
+			<div ng-repeat="(formGroup, layouts) in formGroups | orderBy:sortOrder" class="form-group">
+				<div data-ng-repeat="layout in layouts">
+					<label for="{{layout.key}}" ng-class="labelClass(layout)">{{layout.key}}</label>
+			    <div ng-class="inputClass(layout)">
+			      <input type="email" class="form-control" id="{{layout.key}}" placeholder="{{layout.key}}">
+			    </div>
+				</div>
 		 	</div>
 			<!--
 		  <div class="form-group">

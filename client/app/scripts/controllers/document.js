@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-  .controller('DocumentController', function ($scope, $log) {
+  .controller('DocumentController', function ($scope, $log, _) {
     $scope.document =
 			{
 				id : 1,
@@ -15,15 +15,15 @@ angular.module('clientApp')
 				layout : [ {
 					formGroup: 1,
 					key : 'FirstName',
-					labelColumnWidth: 3,
-					inputColumnWidth: 2
+					labelColumnWidth: 2,
+					inputColumnWidth: 3
 				},
 				{
 					formGroup: 1,
 					key : 'Age',
-					labelColumnOffset: 6,
+					labelColumnOffset: 1,
 					labelColumnWidth: 3,
-					inputColumnWidth: 2
+					inputColumnWidth: 3
 				},
 				{
 					formGroup: 2,
@@ -33,21 +33,51 @@ angular.module('clientApp')
 				}
 				]
 			};
-		$scope.predicate = 'formGroup';
-			/*var groups = [];
-
-			$scope.formGroups = function() {
-				groups = [];
-			  return $scope.document;
+		$scope.formGroups = _.groupBy($scope.document.layout, 'formGroup');
+		$scope.sortOrder = 'formGroup';
+		
+		/*
+		 * Return array of css classes 
+		 * that control the placement aspects for the label within the layout
+		 */
+		$scope.labelClass = function(layout) {
+			var classes = ['control-label'];
+			if (layout.labelColumnOffset) {
+				classes.push('col-sm-offset-' + layout.labelColumnOffset);
 			}
+			classes.push('col-sm-' + layout.labelColumnWidth);
+			return classes;
+		};
 
-			$scope.filterFormGroups  TODO CONTINUE HERE = function(player) {
-			        var teamIsNew = indexedTeams.indexOf(player.team) == -1;
-			        if (teamIsNew) {
-			            indexedTeams.push(player.team);
-			        }
-			        return teamIsNew;
-			    }
-			}	*/
+		/*
+		 * Return array of css classes 
+		 * that control the placement aspects for the control within the layout
+		 */
+		$scope.inputClass = function(layout) {
+			var classes = [];
+			if (layout.inputColumnOffset) {
+				classes.push('col-sm-offset-' + layout.inputColumnOffset);
+			}
+			classes.push('col-sm-' + layout.inputColumnWidth);
+			return classes;
+		};
+
+/*		
+		// Group fields by formGroups
+		var indexedFormGroups = [];
+
+		$scope.formGroups = function() {
+			indexedFormGroups = [];
+		  return $scope.document;
+		};
+
+		$scope.filterFormGroups= function(layout) {
+			var isNew = indexedFormGroups.indexOf(layout.formGroup) == -1;
+			if (isNew) {
+		    indexedFormGroups.push(layout.formGroup);
+			}
+			return isNew;
+		};
+*/
 		$log.log('Load doc');
   });

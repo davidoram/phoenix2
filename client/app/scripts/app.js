@@ -4,7 +4,8 @@ angular.module('clientApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'underscore'
 ])
   .config(function ($routeProvider) {
     $routeProvider
