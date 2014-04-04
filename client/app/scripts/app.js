@@ -5,7 +5,8 @@ angular.module('clientApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'underscore'
+  'underscore',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
