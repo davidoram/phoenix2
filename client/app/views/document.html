@@ -16,7 +16,7 @@
 				<div data-ng-repeat="layout in layouts">
 					<label for="{{layout.key}}" ng-class="labelClass(layout)">{{layout.key}}</label>
 			    <div ng-class="inputClass(layout)">
-			      <input type="" class="form-control" id="{{layout.key}}" placeholder="{{layout.key}}">
+			      <input type="{{layout.type}}" class="form-control" id="{{layout.key}}" placeholder="{{layout.key}}">
 			    </div>
 				</div>
 		 	</div>
