@@ -8,20 +8,22 @@ angular.module('clientApp')
 				key : 'PROJ-123',
 				title : 'A better way of designing databases',
 				data: {
-					FirstName: 'Dave',
-					Surname: 'Smith',
-					Age: 45
+					firstName: 'Dave',
+					surname: 'Smith',
+					age: 45
 				},
 				layout : [ {
 					formGroup: 1,
-					key : 'FirstName',
+					label : 'First name',
+					key : 'firstName',
 					labelColumnWidth: 2,
 					inputColumnWidth: 3,
 					type: 'text'
 				},
 				{
 					formGroup: 1,
-					key : 'Age',
+					label : 'Age',
+					key : 'age',
 					labelColumnOffset: 1,
 					labelColumnWidth: 3,
 					inputColumnWidth: 3,
@@ -29,13 +31,15 @@ angular.module('clientApp')
 				},
 				{
 					formGroup: 2,
-					key : 'Surname',
+					label : 'Surname',
+					key : 'surname',
 					labelColumnWidth: 3,
 					inputColumnWidth: 2,
 					type: 'text'
 				}
 				]
 			};
+		
 		$scope.formGroups = _.groupBy($scope.document.layout, 'formGroup');
 		$scope.sortOrder = 'formGroup';
 		
@@ -65,6 +69,12 @@ angular.module('clientApp')
 			classes.push('col-sm-' + layout.inputColumnWidth);
 			return classes;
 		};
+		
+		/*
+		 * Save the data on the form
+		*/
+		$scope.save = function(document) {
+			$log.log('Save doc');
+		};
 
-		$log.log('Load doc');
   });
