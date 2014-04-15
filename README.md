@@ -43,7 +43,7 @@ Run API / Backend
 	$ rackup -Ilib config.ru
 
 	# Test API
-	$ curl -H http://localhost:9292/api/ping
+	$ curl http://localhost:9292/api/ping
 	
 	# Test Web
 	$ open http://localhost:9292/

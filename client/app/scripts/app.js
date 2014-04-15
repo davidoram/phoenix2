@@ -6,9 +6,10 @@ angular.module('clientApp', [
   'ngSanitize',
   'ngRoute',
   'underscore',
-  'ui.bootstrap'
+  'ui.bootstrap',
+	'restangular'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, RestangularProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -25,4 +26,9 @@ angular.module('clientApp', [
       .otherwise({
         redirectTo: '/'
       });
+
+		// Configure Restangular
+		// TODO: configure these settings
+    RestangularProvider.setBaseUrl('http://localhost:9292/api');
+			
   });

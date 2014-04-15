@@ -1,5 +1,5 @@
 class Web < Sinatra::Base
   get '/' do
-    "Hello world."
+    "This site is up."
   end
 end
