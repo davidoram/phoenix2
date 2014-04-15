@@ -23,6 +23,10 @@ angular.module('clientApp', [
         templateUrl: 'views/document.html',
         controller: 'DocumentController'
       })
+      .when('/forms/:id', {
+        templateUrl: 'views/form.html',
+        controller: 'FormController'
+      })
       .otherwise({
         redirectTo: '/'
       });

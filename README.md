@@ -1,10 +1,10 @@
 phoenix2
 ========
 
-Experiment with ember.js and rack based api, dynamic form system
+Experiment with Angular.js and rack based api, dynamic form system
 
 Backend - Sinatra/Grape
-Frontend - Ember.js
+Frontend - Angular
 
 Pre-requisites
 ---
