@@ -68,7 +68,46 @@ class API < Grape::API
 			}
 			]
 		}
-		
+  end
+
+  desc "Return the data need to render a form"
+  get '/api/forms/:id' do 
+		{
+			id: 1,
+			title: 'Form1',
+			data: {
+				firstName: 'Sample',
+				surname: 'Sample',
+				age: 99,
+				height: 88
+			},
+			layout: [ {
+				formGroup: 1,
+				label: 'First name',
+				key: 'firstName',
+				labelColumnWidth: 2,
+				inputColumnWidth: 3,
+				type: 'text'
+			},
+			{
+				formGroup: 1,
+				label: 'Age',
+				key: 'age',
+				labelColumnOffset: 1,
+				labelColumnWidth: 3,
+				inputColumnWidth: 3,
+				type: 'number'
+			},
+			{
+				formGroup: 2,
+				label: 'Surname',
+				key: 'surname',
+				labelColumnWidth: 3,
+				inputColumnWidth: 2,
+				type: 'text'
+			}
+			]
+		}
   end
   
 end
