@@ -10,18 +10,22 @@
 	
 	<div class="row">
 		
-		<div class="col-md-2 panel px-form-editor">
-			<div class="panel-heading">
-			    <h3 class="panel-title">Form editor</h3>
+		<div class="col-md-2">
+			<div class="panel px-form-editor">
+				<div class="panel-heading">
+				    <h3 class="panel-title">Form editor</h3>
+				</div>
+				<div class="panel-body">
+					<form role="form">
+						<div class="form-group">
+						    <label for="title">Form title</label>
+						    <input type="text" class="form-control" ng-model="document.title" placeholder="Form title">
+					  </div>
+					</form>
+				</div>
 			</div>
-			<div class="panel-body">
-				<form role="form">
-					<div class="form-group">
-					    <label for="title">Form title</label>
-					    <input type="text" class="form-control" ng-model="document.title" placeholder="Form title">
-				  </div>
-				</form>
-			</div>
+			<!-- Add some space between this and the next column -->
+			<div></div> 
 		</div>
 	
 		<!-- Form -->
@@ -55,16 +59,20 @@
 			</div>
 		</div>
 	
-		<div class="col-md-2 panel px-field-editor">
-			<div class="panel-heading">
-			    <h3 class="panel-title">Field editor</h3>
-			</div>
-			<div class="panel-body">
-				<form role="form">
-					<div class="form-group">
-					    <label for="title">TODO</label>
-				  </div>
-				</form>
+		<div class="col-md-2">
+			<!-- Add some space between this and the next column -->
+			<div></div> 
+			<div class="panel px-field-editor">
+				<div class="panel-heading">
+				    <h3 class="panel-title">Field editor</h3>
+				</div>
+				<div class="panel-body">
+					<form role="form">
+						<div class="form-group">
+						    <label for="title">TODO</label>
+					  </div>
+					</form>
+				</div>
 			</div>
 		</div>
 		
