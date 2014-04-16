@@ -1,6 +1,19 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import "../bower_components/bourbon//app/assets/stylesheets/_bourbon";
+
+.px-form-editor {
+    @include background(linear-gradient(#f2e3d2, #c9b7a2) left repeat, radial-gradient(#f2e3d2, #c9b7a2) left repeat);
+}
+
+.px-field-editor {
+    @include background(linear-gradient(#f2e3d2, #c9b7a2) left repeat, radial-gradient(#f2e3d2, #c9b7a2) left repeat);
+}
+
+.px-form {
+    @include background(linear-gradient(#f2e3d2, #c9b7a2) left repeat, radial-gradient(#f2e3d2, #c9b7a2) left repeat);
+}
 
 .browsehappy {
     margin: 0.2em 0;
@@ -13,6 +26,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-image:url('/images/background.jpg');
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

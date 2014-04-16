@@ -8,19 +8,30 @@
 
 <div class="container-fluid">
 	
-	<div class=row>
-		<div class="col-md-2">
-			<form role="form">
-				<div class="form-group">
-				    <label for="title">Form title</label>
-				    <input type="text" class="form-control" ng-model="document.title" placeholder="Form title">
-			  </div>
-			</form>
+	<div class="row">
+		
+		<div class="col-md-2 panel px-form-editor">
+			<div class="panel-heading">
+			    <h3 class="panel-title">Form editor</h3>
+			</div>
+			<div class="panel-body">
+				<form role="form">
+					<div class="form-group">
+					    <label for="title">Form title</label>
+					    <input type="text" class="form-control" ng-model="document.title" placeholder="Form title">
+				  </div>
+				</form>
+			</div>
 		</div>
 	
 		<!-- Form -->
-		<div class="col-md-8">
-			<div class="col-xs-12 main">
+		<div class="col-md-8 panel px-form panel">
+
+			<div class="panel-heading">
+			    <h3 class="panel-title">Form</h3>
+			</div>
+
+			<div class="col-xs-12 main panel-body">
 		
 				<form class="form-horizontal" role="form">
 					<div ng-repeat="(formGroup, layouts) in formGroups | orderBy:sortOrder" class="form-group">
@@ -42,16 +53,24 @@
 				  </div>
 				</form>
 			</div>
-
 		</div>
 	
-		<div class="col-md-2">
-			Right Sidebar
+		<div class="col-md-2 panel px-field-editor">
+			<div class="panel-heading">
+			    <h3 class="panel-title">Field editor</h3>
+			</div>
+			<div class="panel-body">
+				<form role="form">
+					<div class="form-group">
+					    <label for="title">TODO</label>
+				  </div>
+				</form>
+			</div>
 		</div>
 		
 	</div>
 
-	<div class=row>
+	<div class="row">
 		<div class="col-xs-12 main">
 			<pre>document = {{document | json}}</pre>
 		</div>
