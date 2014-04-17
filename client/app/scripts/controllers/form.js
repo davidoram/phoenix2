@@ -8,6 +8,34 @@ angular.module('clientApp').controller('FormController', function ($scope, $log,
 		$scope.formGroups = _.groupBy(document.layout, 'formGroup');
 		$scope.sortOrder = 'formGroup';
 	});
+
+	// Fields that can be added to the form
+	$scope.fields = [
+		{
+			name: 'Text',
+			type: 'text',
+			element: 'input',
+			sampleData: 'Sue'
+		},
+		{
+			name: 'Label',
+			type: 'label',
+			element: 'label',
+			sampleData: 'Name'
+		},
+		{
+			name: 'Number',
+			type: 'number',
+			element: 'input',
+			sampleData: 16
+		},
+		{
+			name: 'Date',
+			type: 'date',
+			element: 'input',
+			sampleData: '2001-12-25'
+		}
+	];
 		
 	// Note: Type can be one of text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
 	/*

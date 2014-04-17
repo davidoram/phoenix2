@@ -67,12 +67,23 @@
 				    <h3 class="panel-title">Field editor</h3>
 				</div>
 				<div class="panel-body">
-					<form role="form">
-						<div class="form-group">
-						    <label for="title">TODO</label>
-					  </div>
-					</form>
-				</div>
+					<!-- List group -->
+				  	<ul class="list-group">
+				    	<li class="list-group-item" data-ng-repeat="field in fields">
+				    		{{field.name}}
+				    		<input type="{{field.type}}" 
+				    		 	  class="form-control input-sm" 
+				    		 	  ng-model="field.sampleData"
+				    		 	  disabled
+				    		 	  ng-if="field.element == 'input'">
+				    		<div ng-if="field.element == 'label'">
+				    		<label>
+				    			{{field.sampleData}}
+				    		</label>
+				    		</div>
+				    	</li>
+				  	</ul>
+  				</div>
 			</div>
 		</div>
 		
